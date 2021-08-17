@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSumbit()" [formGroup]="form">
+  <div class="search-input-container">
+    <div class="search-input-control">
+      <label for="search-movie-input">Search movie:</label>
+      <input
+        id="search-movie-input"
+        type="search"
+        placeholder="Search"
+        formControlName="search"
+      />
+    </div>
+    <button type="submit" [disabled]="!form.valid">Search</button>
+  </div>
+</form>

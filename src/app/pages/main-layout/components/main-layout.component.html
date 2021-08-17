@@ -1,0 +1,9 @@
+<app-movie-lookup (onSearch)="handleOnSearch($event)"></app-movie-lookup>
+<div *ngIf="movies.length">
+  <ng-container *ngFor="let item of movies">
+    <app-movie-results [item]="item"></app-movie-results>
+  </ng-container>
+</div>
+<div *ngIf="!movies.length && isSearchSubmitted">
+  <span>No results</span>
+</div>
